@@ -61,47 +61,83 @@
                                  <li> <div>
                                         <img src="assets/img/bird.png"  alt="tree" />
                                         <p class="titulo"> Protect </p>
-
-                                            <p class="descricao">   
-                                                <?php foreach($texto as $tex):
-                                                     if ($tex->tag == "Protect")
-                                                         print $tex->texto;
-                                                     endforeach; ?> </p>
-                                       
+                                             <ul class="descricao">
+                                                <?php foreach($texto as $tex): ?>
+                                                    <?php if ($tex->tag == "Protect"): ?>
+                                                         <li> <?php print $tex->texto; ?></li>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?> 
+                                             </ul>
                                     </div>
                                 </li>
                                 <li> <div>
                                         <img src="assets/img/tree.png"  alt="tree" />
                                         <p class="titulo"> Environment </p>
-                                    
-                                            <p class="descricao">
-                                                        <?php foreach($texto as $tex):
-                                                             if ($tex->tag == "Environment")
-                                                                 print $tex->texto;
-                                                        endforeach; ?>  </p>
-                                     
+                                            <ul class="descricao">
+                                                <?php foreach($texto as $tex): ?>
+                                                    <?php if ($tex->tag == "Environment"): ?>
+                                                         <li> <?php print $tex->texto; ?></li>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?> 
+                                             </ul>
                                     </div>
                                 </li>
                                 <li> <div>
                                         <img src="assets/img/hand.png"  alt="tree" />
                                         <p class="titulo"> Family </p>
- 
-                                            <p class="descricao">
-                                                        <?php foreach($texto as $tex):
-                                                             if ($tex->tag == "Family")
-                                                                 print $tex->texto;
-                                                         endforeach; ?> </p>
-                                     
+                                            <ul class="descricao">
+                                                <?php foreach($texto as $tex): ?>
+                                                    <?php if ($tex->tag == "Family"): ?>
+                                                         <li> <?php print $tex->texto; ?></li>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?> 
+                                        </ul>
                                     </div>
                                 </li>
                             </ul>
-                            
                         </div>
                     </div>
                 </li>
                 <li id="section-three">
-                    <div class="middle">
-                        <p><a href="#section-three">Go to page #03</a></p>
+                    <div id="contacts">
+                        <div>
+                            <p class='titulo' >Contacts </p>
+                            <?php if(!empty($msg)): ?>
+                             <p class='msg'>Enviado com sucesso.</p> 
+                            <?php endif; ?>
+                            
+                        </div>
+                        <div>
+                                <fieldset>
+                                    <div class="form">
+                                            <?php echo form_open (base_url()."Single_Page/index.php/singlePage/add_db");  ?>
+                                            <dl>
+                                                <dt><label for="name">Name</label></dt>
+                                                <dd><?php echo form_input("name", ""); ?></dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><label for="email">E-mail</label></dt>
+                                                <dd><?php echo form_input("email", ""); ?></dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><label for="message">Message</label></dt>
+                                                <dd><?php echo form_textarea("message", ""); ?></dd>
+                                            </dl>
+                                            <?php echo form_submit("submit", "Enviar"); ?> 
+                                            </form>
+                                    </div>
+                                    <div class="social">
+                                        <p> Redes Sociais</p>
+                                        <ul>
+                                            <li><a class="facebook" href="https://www.facebook.com/" > </a></li>
+                                            <li><a class="twitter" href="https://twitter.com/?lang=pt-br" > </a></li>
+                                            <li><a class="google-plus" href="https://plus.google.com/" > </a></li>
+                                            <li><a class="instagram" href="https://www.instagram.com/?hl=pt-br" > </a></li>
+                                            <li><a class="linkedin" href="https://www.linkedin.com/" > </a></li>
+                                        </ul>
+                                    </div>
+                                </fieldset>
+                        </div>
                     </div>
                 </li>
             </ul>
