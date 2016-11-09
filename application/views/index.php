@@ -2,9 +2,14 @@
 <html>
     <head>
         <title>SinglePageApp</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="assets/css/stylesheets.css" />
+        <!-- Responsive Design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
+        <!-- Stylesheets -->
+        <link type="text/css" rel="stylesheet" media="(max-width: 600px)" href="assets/css/responsive-small.css" />
+        <link type="text/css" rel="stylesheet" media="(min-width: 1200px)" href="assets/css/stylesheets.css" />
+        <link type="text/css" rel="stylesheet" media="(max-width: 1200px) and (min-width: 600px)" href="assets/css/responsive-large.css" />
+        <!-- JacaScript -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/jquery.cycle.all.js"></script>
         <script type="text/javascript" src="assets/js/ciclo-animate.js"></script>
@@ -58,40 +63,34 @@
                         <div class="inf">
                             
                             <ul>
-                                 <li> <div>
-                                        <img src="assets/img/bird.png"  alt="tree" />
-                                        <p class="titulo"> Protect </p>
-                                             <ul class="descricao">
+                                 <li class="protect"> 
+                                    <div>
+                                        <h3 class="titulo"> Protect </h3>
                                                 <?php foreach($texto as $tex): ?>
                                                     <?php if ($tex->tag == "Protect"): ?>
-                                                         <li> <?php print $tex->texto; ?></li>
+                                                     <p class="descricao"> <?php print $tex->texto; ?> </p>
                                                     <?php endif; ?>
                                                 <?php endforeach; ?> 
-                                             </ul>
                                     </div>
                                 </li>
-                                <li> <div>
-                                        <img src="assets/img/tree.png"  alt="tree" />
-                                        <p class="titulo"> Environment </p>
-                                            <ul class="descricao">
+                                <li class="environment">
+                                     <div>
+                                        <h3 class="titulo"> Environment </h3>
                                                 <?php foreach($texto as $tex): ?>
                                                     <?php if ($tex->tag == "Environment"): ?>
-                                                         <li> <?php print $tex->texto; ?></li>
+                                                         <p class="descricao"> <?php print $tex->texto; ?> </p>
                                                     <?php endif; ?>
                                                 <?php endforeach; ?> 
-                                             </ul>
                                     </div>
                                 </li>
-                                <li> <div>
-                                        <img src="assets/img/hand.png"  alt="tree" />
-                                        <p class="titulo"> Family </p>
-                                            <ul class="descricao">
+                                <li class="family"> 
+                                    <div>
+                                        <h3 class="titulo"> Family </h3>
                                                 <?php foreach($texto as $tex): ?>
                                                     <?php if ($tex->tag == "Family"): ?>
-                                                         <li> <?php print $tex->texto; ?></li>
+                                                        <p class="descricao"> <?php print $tex->texto; ?> </p>
                                                     <?php endif; ?>
                                                 <?php endforeach; ?> 
-                                        </ul>
                                     </div>
                                 </li>
                             </ul>
@@ -110,7 +109,7 @@
                         <div>
                                 <fieldset>
                                     <div class="form">
-                                            <?php echo form_open (base_url()."Single_Page/index.php/singlePage/add_db");  ?>
+                                            <?php echo form_open (base_url()."Single_Page/index.php/Contacts/add_db");  ?>
                                             <dl>
                                                 <dt><label for="name">Name</label></dt>
                                                 <dd><?php echo form_input("name", ""); ?></dd>
