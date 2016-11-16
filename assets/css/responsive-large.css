@@ -3,7 +3,7 @@
 * { margin: 0; padding: 0; }
 html, body {height: 100%;}
 
-div.middle {width: 55%;height: 66%;background-color: white;overflow: hidden;position: absolute;left: 50%;margin-left: -27%;top: 40%;margin-top: -20%;border-radius: 10px;}
+div.middle {width: 55%; height: 50%;background-color: white;overflow: hidden;position: absolute;left: 50%;margin-left: -27%;top: 40%;margin-top: -20%;border-radius: 10px;}
 div#default { width: 100%; height: 100%; z-index: 10; }
 div#default > ul { float: left; width: 100%; height: 100%; }
 div#default > ul > li { float: left; position: relative; width: 100%; height: calc(100% - 30px); padding-top: 30px; }
@@ -26,8 +26,8 @@ div#gallery { position: relative; z-index: 10; width: 100%; height: 100%; float:
 div#gallery ul { width: 100%; height: 100%; float: left; }
 div#gallery ul li { width: 100%; height: 100%; float: left; list-style: none; }
 div#gallery ul li div.banner-phrase {position: absolute;z-index: 30;width: 35%;top: 0;height: 101%;left: 0;background-image: url("../img/bg-banner-phrase.png");}
-div#gallery ul li div.banner-phrase h1 {float: left; padding-left: 25px;margin-top: 165px;padding-right: 25px;color: white;text-shadow: #000 1px -1px, #000 -1px 1px, #000 1px 1px, #000 -1px -1px;}
-div#gallery ul li div.banner-phrase h2 {width: 100px;height: 45px; padding: 0px;bottom: 150px; position: absolute; color: white;border: 3px solid #999;left: 90px; cursor: pointer; border-radius: 4px;}
+div#gallery ul li div.banner-phrase h1 {float: left; padding-left: 25px;margin-top: 145px;padding-right: 25px;color: white;text-shadow: #000 1px -1px, #000 -1px 1px, #000 1px 1px, #000 -1px -1px;}
+div#gallery ul li div.banner-phrase h2 {width: 100px;height: 45px; padding: 0px;bottom: 150px; position: absolute; color: white;border: 3px solid #999;left: 90px; cursor: pointer; border-radius: 4px;top: 320px;}
 div#gallery ul li div.banner-phrase h2 a { float: left; text-align: center; font-size: 16px; line-height: 45px; width: 100%; text-decoration: none; color: white; text-shadow: #000 1px -1px, #000 -1px 1px, #000 1px 1px, #000 -1px -1px; }
 div#gallery ul li div.banner-phrase h2:hover { background-color: #05A009; color: #003300; opacity: 0.85}
 div#gallery ul li div.banner-image { float: left; height: 100%; position: relative; z-index: 20; width: 100%;}
